@@ -10,6 +10,7 @@
 
 @interface FirstViewController : UIViewController
 
+- (IBAction)weiXinPay:(id)sender;
 
 @end
 
