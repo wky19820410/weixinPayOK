@@ -6,8 +6,9 @@
 //  Copyright (c) 2015年 wky. All rights reserved.
 //
 
+#define APP_ID @"wx8b9bfb7a51ec08f2"
+
 #import "AppDelegate.h"
-#import "WXApi.h"
 
 @interface AppDelegate ()
 
@@ -44,5 +45,37 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return  [WXApi handleOpenURL:url delegate:self];
+}
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return  [WXApi handleOpenURL:url delegate:self];
+}
+
+- (void)onResp:(BaseResp*)resp{
+    if ([resp isKindOfClass:[PayResp class]]){
+        PayResp*response=(PayResp*)resp;
+        switch(response.errCode){
+            case WXSuccess:
+            {
+                //服务器端查询支付通知或查询API返回的结果再提示成功
+                NSLog(@"支付成功");
+                NSString *strTemp = [NSString stringWithFormat:@"支付成功"];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"支付结果" message:strTemp delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+            }
+                break;
+            default :
+                NSLog(@"支付失败，retcode=%d",resp.errCode);
+                NSString *strTempB = [NSString stringWithFormat:@"支付失败的代码 ＝ %d",response.errCode];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"支付结果" message:strTempB delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+                break;
+        }
+        
+    }
+}
 @end
