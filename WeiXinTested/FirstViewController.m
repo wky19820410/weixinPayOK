@@ -25,7 +25,7 @@
 }
 
 - (IBAction)weiXinPay:(id)sender {
-    
+    NSLog(@"5555");
 }
 
 @end

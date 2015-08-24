@@ -15,6 +15,7 @@
 		82A4952C1B8ABFA300417890 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82A4952B1B8ABFA300417890 /* Images.xcassets */; };
 		82A4952F1B8ABFA300417890 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A4952D1B8ABFA300417890 /* LaunchScreen.xib */; };
 		82A4953B1B8ABFA400417890 /* WeiXinTestedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A4953A1B8ABFA400417890 /* WeiXinTestedTests.m */; };
+		82A495451B8AF02C00417890 /* WeChatSDK_1.5 in Resources */ = {isa = PBXBuildFile; fileRef = 82A495441B8AF02C00417890 /* WeChatSDK_1.5 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		82A495341B8ABFA400417890 /* WeiXinTestedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiXinTestedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A495391B8ABFA400417890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82A4953A1B8ABFA400417890 /* WeiXinTestedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiXinTestedTests.m; sourceTree = "<group>"; };
+		82A495441B8AF02C00417890 /* WeChatSDK_1.5 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WeChatSDK_1.5; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		82A4950F1B8ABFA200417890 = {
 			isa = PBXGroup;
 			children = (
+				82A495441B8AF02C00417890 /* WeChatSDK_1.5 */,
 				82A4951A1B8ABFA200417890 /* WeiXinTested */,
 				82A495371B8ABFA400417890 /* WeiXinTestedTests */,
 				82A495191B8ABFA200417890 /* Products */,
@@ -206,6 +209,7 @@
 			files = (
 				82A4952A1B8ABFA300417890 /* Main.storyboard in Resources */,
 				82A4952F1B8ABFA300417890 /* LaunchScreen.xib in Resources */,
+				82A495451B8AF02C00417890 /* WeChatSDK_1.5 in Resources */,
 				82A4952C1B8ABFA300417890 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +426,7 @@
 				82A495401B8ABFA400417890 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82A495411B8ABFA400417890 /* Build configuration list for PBXNativeTarget "WeiXinTestedTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +435,7 @@
 				82A495431B8ABFA400417890 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
