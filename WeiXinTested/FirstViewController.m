@@ -30,7 +30,10 @@
 }
 
 - (IBAction)weiXinPay:(id)sender {
-    
+    if (![WXApi isWXAppInstalled]) {
+        NSLog(@"not isWXAppInstalled");
+        return;
+    }
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];//使用这个将得到的是JSON
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json", @"text/plain", @"text/html", nil];
