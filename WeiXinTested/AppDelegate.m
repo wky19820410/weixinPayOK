@@ -5,10 +5,20 @@
 //  Created by mobiusif on 15/8/24.
 //  Copyright (c) 2015年 wky. All rights reserved.
 //
+/*说明：微信支付的简要流程  //   wky19824010@163.com
+ 1.首先查看官方的流程图，下载官方的demo，仔细研究。
+ 2.添加库WeChatSDK_1.5
+ 3.编译添加库文件。
+ 4.添加URL Schemes
+ 4.查看appdelegate
+ 5.查看界面的按钮事件。
+ 6.注意官方文档的说明和sdk有些不一样，导致md5签名的时候逻辑有些变动。
+ */
 
-#define APP_ID @"wx8b9bfb7a51ec08f2"
+
 
 #import "AppDelegate.h"
+#import "Common.h"
 
 @interface AppDelegate ()
 
@@ -47,15 +57,15 @@
 }
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
-    return  [WXApi handleOpenURL:url delegate:self];
+    return  [WXApi handleOpenURL:url delegate:self];//微信注册回调
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    return  [WXApi handleOpenURL:url delegate:self];
+    return  [WXApi handleOpenURL:url delegate:self];//微信注册回调
 }
 
-- (void)onResp:(BaseResp*)resp{
+- (void)onResp:(BaseResp*)resp{         //微信支付结果
     if ([resp isKindOfClass:[PayResp class]]){
         PayResp*response=(PayResp*)resp;
         switch(response.errCode){

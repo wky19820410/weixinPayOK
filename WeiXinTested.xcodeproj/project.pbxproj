@@ -10,7 +10,6 @@
 		82A4951E1B8ABFA300417890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A4951D1B8ABFA300417890 /* main.m */; };
 		82A495211B8ABFA300417890 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A495201B8ABFA300417890 /* AppDelegate.m */; };
 		82A495241B8ABFA300417890 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A495231B8ABFA300417890 /* FirstViewController.m */; };
-		82A495271B8ABFA300417890 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A495261B8ABFA300417890 /* SecondViewController.m */; };
 		82A4952A1B8ABFA300417890 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82A495281B8ABFA300417890 /* Main.storyboard */; };
 		82A4952C1B8ABFA300417890 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82A4952B1B8ABFA300417890 /* Images.xcassets */; };
 		82A4952F1B8ABFA300417890 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A4952D1B8ABFA300417890 /* LaunchScreen.xib */; };
@@ -44,8 +43,6 @@
 		82B60A661B8C197B0082FD89 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B60A541B8C197B0082FD89 /* AFURLResponseSerialization.m */; };
 		82B60A671B8C197B0082FD89 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B60A561B8C197B0082FD89 /* AFURLSessionManager.m */; };
 		82B60A681B8C197B0082FD89 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B60A561B8C197B0082FD89 /* AFURLSessionManager.m */; };
-		82B60A6B1B8C3BEF0082FD89 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B60A6A1B8C3BEF0082FD89 /* TestViewController.m */; };
-		82B60A6C1B8C3BEF0082FD89 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B60A6A1B8C3BEF0082FD89 /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		826FB91C1B8EF46100E2DAC7 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		82A495181B8ABFA200417890 /* WeiXinTested.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiXinTested.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A4951C1B8ABFA300417890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82A4951D1B8ABFA300417890 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,8 +64,6 @@
 		82A495201B8ABFA300417890 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		82A495221B8ABFA300417890 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		82A495231B8ABFA300417890 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		82A495251B8ABFA300417890 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		82A495261B8ABFA300417890 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		82A495291B8ABFA300417890 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82A4952B1B8ABFA300417890 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		82A4952E1B8ABFA300417890 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -104,8 +100,6 @@
 		82B60A541B8C197B0082FD89 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		82B60A551B8C197B0082FD89 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		82B60A561B8C197B0082FD89 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		82B60A691B8C3BEF0082FD89 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		82B60A6A1B8C3BEF0082FD89 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,16 +151,12 @@
 		82A4951A1B8ABFA200417890 /* WeiXinTested */ = {
 			isa = PBXGroup;
 			children = (
-				82B60A691B8C3BEF0082FD89 /* TestViewController.h */,
-				82B60A6A1B8C3BEF0082FD89 /* TestViewController.m */,
 				82B60A431B8C197B0082FD89 /* AFNetworking */,
 				82A495491B8AF2E200417890 /* WeChatSDK_1.5 */,
 				82A4951F1B8ABFA300417890 /* AppDelegate.h */,
 				82A495201B8ABFA300417890 /* AppDelegate.m */,
 				82A495221B8ABFA300417890 /* FirstViewController.h */,
 				82A495231B8ABFA300417890 /* FirstViewController.m */,
-				82A495251B8ABFA300417890 /* SecondViewController.h */,
-				82A495261B8ABFA300417890 /* SecondViewController.m */,
 				82A495281B8ABFA300417890 /* Main.storyboard */,
 				82A4952B1B8ABFA300417890 /* Images.xcassets */,
 				82A4952D1B8ABFA300417890 /* LaunchScreen.xib */,
@@ -178,6 +168,7 @@
 		82A4951B1B8ABFA300417890 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				826FB91C1B8EF46100E2DAC7 /* Common.h */,
 				82A4951C1B8ABFA300417890 /* Info.plist */,
 				82A4951D1B8ABFA300417890 /* main.m */,
 			);
@@ -355,9 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82A495271B8ABFA300417890 /* SecondViewController.m in Sources */,
 				82B60A5F1B8C197B0082FD89 /* AFSecurityPolicy.m in Sources */,
-				82B60A6B1B8C3BEF0082FD89 /* TestViewController.m in Sources */,
 				82A495211B8ABFA300417890 /* AppDelegate.m in Sources */,
 				82B60A591B8C197B0082FD89 /* AFHTTPRequestOperationManager.m in Sources */,
 				82B60A611B8C197B0082FD89 /* AFURLConnectionOperation.m in Sources */,
@@ -383,7 +372,6 @@
 				82B60A5E1B8C197B0082FD89 /* AFNetworkReachabilityManager.m in Sources */,
 				82B60A681B8C197B0082FD89 /* AFURLSessionManager.m in Sources */,
 				82B60A5A1B8C197B0082FD89 /* AFHTTPRequestOperationManager.m in Sources */,
-				82B60A6C1B8C3BEF0082FD89 /* TestViewController.m in Sources */,
 				82B60A601B8C197B0082FD89 /* AFSecurityPolicy.m in Sources */,
 				82B60A5C1B8C197B0082FD89 /* AFHTTPSessionManager.m in Sources */,
 				82B60A641B8C197B0082FD89 /* AFURLRequestSerialization.m in Sources */,
