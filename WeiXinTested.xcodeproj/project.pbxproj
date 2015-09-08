@@ -56,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		824868441B9ED0100059A6BC /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		826FB91C1B8EF46100E2DAC7 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		82A495181B8ABFA200417890 /* WeiXinTested.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiXinTested.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A4951C1B8ABFA300417890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 		82A4950F1B8ABFA200417890 = {
 			isa = PBXGroup;
 			children = (
+				824868441B9ED0100059A6BC /* JavaScriptCore.framework */,
 				82A495601B8B080D00417890 /* lib */,
 				82A4951A1B8ABFA200417890 /* WeiXinTested */,
 				82A495371B8ABFA400417890 /* WeiXinTestedTests */,

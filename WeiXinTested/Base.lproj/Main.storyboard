@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7oU-Q1-KHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1288" y="-740"/>
+            <point key="canvasLocation" x="-3708" y="-1016"/>
         </scene>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
@@ -35,10 +35,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcG-Dn-H1q">
+                                <rect key="frame" x="125" y="514" width="148" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.22527816540000001" blue="0.4143904135" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pDV-Rm-hVh"/>
+                                </constraints>
+                                <state key="normal" title="js测试">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="jsTest:" destination="9pv-A4-QxB" eventType="touchUpInside" id="lKW-fx-7mZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2g-iv-Odz">
+                                <rect key="frame" x="272" y="550" width="39" height="30"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.13591579263151321" blue="0.21147990209454851" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="html5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnEventHtml5:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Ljy-M8-aZF"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFf-Uf-lzS">
-                                <rect key="frame" x="83" y="177" width="230" height="30"/>
+                                <rect key="frame" x="34" y="570" width="109" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.72058061449344502" blue="0.60600911269531998" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="微信测试">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -48,10 +71,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oFf-Uf-lzS" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="113" id="ECZ-Uc-vU6"/>
-                            <constraint firstItem="oFf-Uf-lzS" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="67" id="dPk-bZ-wZd"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="oFf-Uf-lzS" secondAttribute="bottom" constant="411" id="zcE-vG-yTj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oFf-Uf-lzS" secondAttribute="trailing" constant="46" id="zrH-Nl-h4X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fcG-Dn-H1q" secondAttribute="trailing" constant="86" id="5WM-ZY-hYV"/>
+                            <constraint firstItem="oFf-Uf-lzS" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="506" id="ECZ-Uc-vU6"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="v2g-iv-Odz" secondAttribute="bottom" constant="38" id="TdQ-em-PDN"/>
+                            <constraint firstItem="fcG-Dn-H1q" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="450" id="Vpt-pW-m10"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v2g-iv-Odz" secondAttribute="trailing" constant="48" id="Wlm-cz-XIF"/>
+                            <constraint firstItem="oFf-Uf-lzS" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="18" id="dPk-bZ-wZd"/>
+                            <constraint firstItem="fcG-Dn-H1q" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="109" id="fD8-Xs-c9v"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="oFf-Uf-lzS" secondAttribute="bottom" constant="18" id="zcE-vG-yTj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oFf-Uf-lzS" secondAttribute="trailing" constant="216" id="zrH-Nl-h4X"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
@@ -60,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-342.5" y="-694.5"/>
+            <point key="canvasLocation" x="-2998.5" y="-1082.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -78,7 +106,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3148" y="-932"/>
+            <point key="canvasLocation" x="-4752" y="-1000"/>
         </scene>
     </scenes>
     <resources>

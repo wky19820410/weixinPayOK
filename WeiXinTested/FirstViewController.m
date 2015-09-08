@@ -12,8 +12,12 @@
 #import <Foundation/Foundation.h>
 #import <CommonCrypto/CommonDigest.h>
 #import "Common.h"
+#import <JavaScriptCore/JavaScriptCore.h>
 
-@interface FirstViewController ()
+@interface FirstViewController (){
+    UIWebView *webView;
+    JSContext *jsContext;
+}
 
 @end
 
@@ -27,6 +31,90 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)viewDidAppear:(BOOL)animated{
+    webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, 320, 400)];
+    
+    webView.delegate = self;
+    webView.backgroundColor = [UIColor colorWithRed:23/255.0 green:133/255.0 blue:144/255.0 alpha:1.0f];
+    [self.view addSubview:webView];
+}
+- (IBAction)jsTest:(id)sender {
+    NSLog(@"jsTest");
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    manager.responseSerializer = [AFJSONResponseSerializer serializer];//使用这个将得到的是JSON
+//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json", @"text/plain", @"text/html", nil];
+//    
+//    //SEND YOUR REQUEST
+//    [manager POST:REQUEST_PAY2 parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"JSON: %@", responseObject);
+//        
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"Error: %@", error);
+//    }];
+//    NSString *path = [[NSBundlemainBundle] pathForResource:@"HtmlTest"ofType:@"html"];
+    
+    
+    
+
+    
+    
+    
+    //webView载入一个本地的html数据，当然也可以从一个url载入webView
+    
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:REQUEST_PAY2]]];
+    
+}
+- (void)webViewDidFinishLoad:(UIWebView *)awebView {
+    
+//    NSString *string = [awebView stringByEvaluatingJavaScriptFromString:@"document.getElementById('field_2').value;" ];
+//    
+//    NSLog(@"string:%@", string);
+//    
+//    //这样就得到了field_2控件的value.
+//    NSLog(@"webViewDidFinishLoad!!!");
+//    NSString *lJs = @"document.documentElement.innerHTML";
+//    [self executeJSFunction:lJs];
+//    NSString *str1 = @"document.getElementById('topimage').src;";
+//    [self executeJSFunction:str1];
+    if (jsContext == nil) {
+        // 1.
+        jsContext = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+        
+        // 2. 关联打印异常
+        jsContext.exceptionHandler = ^(JSContext *context, JSValue *exceptionValue) {
+            context.exception = exceptionValue;
+            NSLog(@"异常信息：%@", exceptionValue);
+        };
+        
+        jsContext[@"fuc"] = ^(NSDictionary *param) {
+            NSLog(@"fuc ok!!!!!!!");
+            NSLog(@"param== %@",param);
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"AlertViewTest"
+                                                            message:[NSString stringWithFormat:@"%@",param]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Cancel"
+                                                  otherButtonTitles:@"OtherBtn",nil];
+            [alert show];
+        };
+        jsContext[@"xyz"] = ^() {
+            NSLog(@"xyz");
+        };
+        // Mozilla/5.0 (iPhone; CPU iPhone OS 10_10 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12B411
+//        id userAgent = [webView stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
+//        NSLog(@"%@", userAgent);
+    }
+}
+- (IBAction)btnEventHtml5:(id)sender {
+    NSLog(@"btnEventHtml5!!!!!");
+    NSString *str = @"document.getElementById(\"test\").value=\"456789\"";
+//    [jsContext evaluateScript:str];
+    [self executeJSFunction:str];
+}
+//返回运行后js结果
+- (void)executeJSFunction:(NSString *)jsCommand{
+    NSString *result = [webView stringByEvaluatingJavaScriptFromString:jsCommand];
+    NSLog(@"result:%@",result);
 }
 
 - (IBAction)weiXinPay:(id)sender {
@@ -74,6 +162,8 @@
         NSLog(@"Error: %@", error);
     }];
 }
+
+
 //创建package签名(发送到微信客户端) 官方sdk算法
 - (NSString*) createMd5Sign:(NSMutableDictionary*)dict  key:(NSString *)strKey
 {

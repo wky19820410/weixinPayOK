@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController<UIWebViewDelegate>
 
 - (IBAction)weiXinPay:(id)sender;
+- (IBAction)btnEventHtml5:(id)sender;
 
 @end
 
